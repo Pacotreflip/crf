@@ -38,11 +38,11 @@ elixir(function(mix) {
       'js/jquery.js',
       'js/bootstrap.js'
     ],
-    'public/assets/js/admin.js',
+    'public/assets/js/app.js',
     'resources/assets'
   );
 
   // Compile Less
-  mix.less('admin.less', 'public/assets/css/admin.css');
+  mix.less('admin.less', 'public/assets/css/app.css');
   mix.sass('app.scss');
 });

@@ -13,7 +13,7 @@
             @include('partials.nav')
             @yield('header')
         </header>
-        <div class="container" style="width: 98%;">
+        <div class="container" style="width: 90%;">
             @include('flash::message')
             @yield('content')
         </div>    

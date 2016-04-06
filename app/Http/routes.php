@@ -12,8 +12,13 @@
 */
 
 // Rutas de Páginas
-Route::get('/', 'PagesController@home')->name('home');
+Route::get('/', 'PagesController@home');
 
+// Rutas de Usuario
+Route::get('usuario', 'UsuarioController@index');
+
+// Rutas de Academia
+Route::get('academia', 'AcademiaController@index');
 // Rutas de autenticacion...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

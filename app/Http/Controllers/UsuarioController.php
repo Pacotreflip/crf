@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class AcademiaController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * PagesController constructor.
@@ -12,7 +12,6 @@ class AcademiaController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->middleware('auth');
     }
 
     /**
@@ -22,6 +21,6 @@ class AcademiaController extends Controller
      */
     public function index()
     {
-        return view('academia.index');
+        return view('usuario.index');
     }
 }

@@ -10,4 +10,17 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 abstract class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+    public function __construct() {
+        view()->share('periodo', $this->periodo());
+    }
+    
+    function periodo() {
+        if(getdate()['mon'] < 7) {
+            return getdate()['year'] . ' - ' . 2;
+        } else {
+            return getdate()['year'] + 1 . ' - ' . 1;
+        }
+    }
 }
+
