@@ -16,8 +16,8 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ url('auth/login') }}">
-            {!! csrf_field() !!}
+        <form method="POST" action="{{ url($role.'/login') }}">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <!-- Usuario Form Input -->
             <div class="form-group">

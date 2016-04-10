@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Role;
-use App\Models\User;
+use App\Role;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -32,37 +32,43 @@ class DatabaseSeeder extends Seeder
             'name' => 'usuario',
             'display_name' => 'Usuario',
             'description' => 'Usuario del Sistema'            
-		]);
+        ]);
         
         User::create([
-			'name' => 'Administrador',
-			'email' => 'administrador@ipn.mx',
-			'password' => bcrypt('administrador')
-		]);
+            'name' => 'Administrador',
+            'email' => 'administrador@ipn.mx',
+            'password' => bcrypt('administrador')
+        ]);
         
         User::create([
-			'name' => 'Computación',
-			'email' => 'computacion@ipn.mx',
-			'password' => bcrypt('computacion')
-		]);
+            'name' => 'Invitado',
+            'email' => 'invitado@crf.com.mx',
+            'password' => bcrypt('invitado*16')
+        ]);
         
         User::create([
-			'name' => 'Investigación de Operaciones',
-			'email' => 'investigaciondeoperaciones@ipn.mx',
-			'password' => bcrypt('investigaciondeoperaciones')
-		]);
-        
+            'name' => 'Computación',
+            'email' => 'computacion@ipn.mx',
+            'password' => bcrypt('computacion')
+        ]);
+                
         User::create([
-			'name' => 'Finanzas',
-			'email' => 'finanzas@ipn.mx',
-			'password' => bcrypt('finanzas')
-		]);
-        
+            'name' => 'Investigación de Operaciones',
+            'email' => 'investigaciondeoperaciones@ipn.mx',
+            'password' => bcrypt('investigaciondeoperaciones')
+        ]);
+
         User::create([
-			'name' => 'José Francisco Esquivel',
-			'email' => 'francisco@ipn.mx',
-			'password' => bcrypt('francisco')
-		]);
+            'name' => 'Finanzas',
+            'email' => 'finanzas@ipn.mx',
+            'password' => bcrypt('finanzas')
+        ]);
+
+        User::create([
+            'name' => 'José Francisco Esquivel',
+            'email' => 'francisco@ipn.mx',
+            'password' => bcrypt('francisco')
+        ]);
 
         Model::reguard();
     }

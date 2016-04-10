@@ -11,17 +11,16 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-xs-6">
-                <a href="usuario">
+                <a href="usuario/login">
                     <img src="{{asset('img/user.png')}}" class="center-block img-circle img-responsive">
                     <h3 class="text-center">Alumno / Profesor</h3>
                 </a>
             </div>
             <div class="col-md-6 col-xs-6">
-                <a href="academia">
+                <a href="admin/login">
                     <img src="{{asset('img/user.png')}}" class="center-block img-circle img-responsive">
                     <h3 class="text-center">Jefe de Académia</h3>
                 </a>
-
             </div>
         </div>
     </div>

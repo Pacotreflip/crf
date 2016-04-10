@@ -1,5 +1,1 @@
-@extends('layout')
-
-@section('content')
-Alumno Index
-@stop
+INDEX USUARIO
