@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
 
 class AdminController extends Controller {    
     /**
@@ -12,7 +13,7 @@ class AdminController extends Controller {
         parent::__construct();
         $this->middleware('role:admin|academia', ['except' => ['getLogin', 'postLogin', 'getRegistro']]);
     }
-
+    
     /**
      * Display a listing of the resource.
      *
@@ -27,13 +28,12 @@ class AdminController extends Controller {
     }
     
     public function getLogin() {
+        Auth::logout();
         return view('admin.login');
     }
     
     public function  getLogout() {
-        dd('Salise');
         Auth::logout();
-        return redirect('/');
     }
     
     public function postLogin(Request $request) {
@@ -47,7 +47,10 @@ class AdminController extends Controller {
             return redirect()->intended('admin/index');
         }
         else {
-            dd('la haz cagado');
+            return redirect()->back()
+                    ->withInput($request->only('email', 'remember'))
+                    ->withErrors(['errors' => Lang::get('auth.failed'),
+            ]);
         }
     }
         

@@ -16,19 +16,19 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ url($role.'/login') }}">
+        <form method="POST" action="{{ url('auth/login') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <!-- Usuario Form Input -->
             <div class="form-group">
                 <label for="email">E-Mail:</label>
-                <input class="form-control" required="required" autofocus="autofocus" name="email" type="email" id="email">
+                <input class="form-control" required="required"  autofocus="autofocus" name="email" type="email" id="email">
             </div>
 
             <!-- Password Form Input -->
             <div class="form-group">
                 <label for="password">Contraseña:</label>
-                <input class="form-control" required="required" name="password" type="password" id="password">
+                <input class="form-control" required="required"  name="password" type="password" id="password">
             </div>
 
             <div class="checkbox">
@@ -38,6 +38,7 @@
             </div>
 
             <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Iniciar sesión">
                 <input class="btn btn-primary" type="submit" value="Iniciar sesión">
             </div>
         </form>

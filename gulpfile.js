@@ -18,12 +18,18 @@ gulp.task("copyfiles", function() {
     .pipe(gulp.dest("resources/assets/js/"));
 
   gulp.src("vendor/bower_dl/bootstrap/less/**")
-    .pipe(gulp.dest("resources/assets/less/bootstrap"));
+    .pipe(gulp.dest("resources/assets/less/bootstrap"));  
+  
+  gulp.src("vendor/bower_dl/font-awesome/less/**")
+    .pipe(gulp.dest("resources/assets/less/font-awesome"));
 
   gulp.src("vendor/bower_dl/bootstrap/dist/js/bootstrap.js")
     .pipe(gulp.dest("resources/assets/js/"));
 
   gulp.src("vendor/bower_dl/bootstrap/dist/fonts/**")
+    .pipe(gulp.dest("public/assets/fonts"));
+  
+  gulp.src("vendor/bower_dl/font-awesome/fonts/**")
     .pipe(gulp.dest("public/assets/fonts"));
 
 });

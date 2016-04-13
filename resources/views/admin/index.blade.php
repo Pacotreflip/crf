@@ -1,1 +1,1 @@
-INDEX ADMIN
+@extends('layout')

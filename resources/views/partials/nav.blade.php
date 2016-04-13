@@ -7,7 +7,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Classroom Finder</a>
+            <a class="navbar-brand" href="/">
+              <img src="{{ asset('img/company-icon.png')}}" height="48" width="39" alt="Salones UPIICSA"/>
+                 Salones UPIICSA
+      </a>
+            
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">

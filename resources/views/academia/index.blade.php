@@ -1,1 +1,1 @@
-INDEX ACADEMIA 
+@extends('layout')

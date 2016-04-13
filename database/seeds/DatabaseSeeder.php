@@ -38,37 +38,20 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrador',
             'email' => 'administrador@ipn.mx',
             'password' => bcrypt('administrador')
-        ]);
-        
-        User::create([
-            'name' => 'Invitado',
-            'email' => 'invitado@crf.com.mx',
-            'password' => bcrypt('invitado*16')
-        ]);
+        ])->attachRole(1);
         
         User::create([
             'name' => 'Computación',
             'email' => 'computacion@ipn.mx',
             'password' => bcrypt('computacion')
-        ]);
-                
-        User::create([
-            'name' => 'Investigación de Operaciones',
-            'email' => 'investigaciondeoperaciones@ipn.mx',
-            'password' => bcrypt('investigaciondeoperaciones')
-        ]);
+        ])->attachRole(2);
 
         User::create([
             'name' => 'Finanzas',
             'email' => 'finanzas@ipn.mx',
             'password' => bcrypt('finanzas')
-        ]);
-
-        User::create([
-            'name' => 'José Francisco Esquivel',
-            'email' => 'francisco@ipn.mx',
-            'password' => bcrypt('francisco')
-        ]);
+        ])->attachRole(2);
+        
 
         Model::reguard();
     }
