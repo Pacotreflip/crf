@@ -16,6 +16,14 @@ class HomeController extends Controller {
      * @return Response
      */
     public function home() {
-        return view('home');
+        if(auth()->check() && auth()->user()->hasRole('academia')) {
+            return view ('academia.index');
+        } elseif (auth()->check() && auth()->user()->hasRole('admin')) {
+            return view ('admin.index');
+        } elseif (auth()->check() && auth()->user()->hasRole('usuario')) {
+            return view ('usuario.index');          
+        } else {
+            return view('home');
+        }
     }
-}
+}    

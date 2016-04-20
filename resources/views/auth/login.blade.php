@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-        <h1>Inicie Sesión</h1>
+    <div class=" col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <h1>Iniciar Sesión</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -16,12 +16,12 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ url('auth/login') }}">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <form method="POST" action="{{url('auth/login')}}">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
 
             <!-- Usuario Form Input -->
             <div class="form-group">
-                <label for="email">E-Mail:</label>
+                <label for="email">E-mail:</label>
                 <input class="form-control" required="required"  autofocus="autofocus" name="email" type="email" id="email">
             </div>
 
@@ -38,8 +38,8 @@
             </div>
 
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="Iniciar sesión">
-                <input class="btn btn-primary" type="submit" value="Iniciar sesión">
+                <input class="btn btn-success" type="submit" value="Iniciar sesión">
+                <a class="btn btn-primary" href="{{url('auth/facebook')}}" role="button"><i class="fa fa-facebook-f fa-lg"></i> Iniciar Sesión con Facebook</a>
             </div>
         </form>
     </div>
